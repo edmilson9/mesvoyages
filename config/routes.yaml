@@ -2,7 +2,7 @@
 #   path: /
 #   controller: App\ControllerDefaultController::index
 acceuil:
-    path: /accueil
+    path: /
     controller: App\Controller\AccueilController::index
     
 voyages:
