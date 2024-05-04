@@ -40,7 +40,7 @@ class Visite
         return $this->id;
     }
 
-    public function getVille(): ?string
+    public function getVille(): string
     {
         return $this->Ville;
     }
@@ -52,7 +52,7 @@ class Visite
         return $this;
     }
 
-    public function getPays(): ?string
+    public function getPays(): string
     {
         return $this->Pays;
     }
@@ -64,9 +64,13 @@ class Visite
         return $this;
     }
 
-    public function getDatecreation(): ?\DateTimeInterface
+    public function getDatecreationString(): string
     {
-        return $this->Datecreation;
+        if ($this->Datecreation == null)
+        {
+            return "";
+        }else{
+            return $this->Datecreation->format('d/m/Y');}
     }
 
     public function setDatecreation(?\DateTimeInterface $Datecreation): static
